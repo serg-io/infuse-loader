@@ -1,0 +1,20 @@
+<template>
+	<p>Plain text</p>
+	<p>Plain ` text</p>
+	<p>Plain `` text</p>
+	<p>Expression: ${ host.foo }</p>
+	<p>Template literal: `Foo = ${ host.foo }`</p>
+	<p>Tagged template literal: i18n`localizedText`</p>
+	<form>
+		<input id="count" type="number" value="${ host.count }" .value-as-number="${ host.count }">
+		<p>
+			i18n`dateOfBirth`: <input id="dob" type="date">
+			<span const-dob="${ this.previousElementSibling }" dob-events="change">
+				(i18n`age`: ${ host.ageSince(dob.valueAsDate) })
+			</span>
+		</p>
+		<button type="submit" class="btn `btn-${ host.btnType }`" disabled?="${ host.count > 10 }" host-events="[['disabled?', 'change #count']]">
+			i18n`submit`
+		</button>
+	</form>
+</template>
