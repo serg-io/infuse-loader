@@ -17,4 +17,20 @@
 			i18n`submit`
 		</button>
 	</form>
+	<table>
+		<thead>
+			<tr>
+				<th>i18n`firstName`</th>
+				<th>i18n`lastName`</th>
+			</tr>
+		</thead>
+		<tbody>
+			<template for="[user, i, users]" each="${ host.users }">
+				<tr>
+					<td>${ user.firstName }</td>
+					<td>${ user.lastName }</td>
+				</tr>
+			</template>
+		</tbody>
+	</table>
 </template>
