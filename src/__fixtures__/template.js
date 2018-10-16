@@ -1,35 +1,35 @@
 import { contextFunctions, parsedTemplates } from 'infuse.host/src/core';
 
 const html = `<!DOCTYPE html>
-<body><template data-tid="template1_bd3a047">
+<body><template data-tid="template1_cbf9ce2">
 	<p>Plain text</p>
 	<p>Plain \` text</p>
 	<p>Plain \`\` text</p>
-	<p data-cid="p2_bd3a047">_</p>
-	<p data-cid="p3_bd3a047">_</p>
-	<p data-cid="p4_bd3a047">_</p>
+	<p data-cid="p2_cbf9ce2">_</p>
+	<p data-cid="p3_cbf9ce2">_</p>
+	<p data-cid="p4_cbf9ce2">_</p>
 	<form>
-		<input id="count" type="number" data-cid="input5_bd3a047">
-		<p data-cid="p6_bd3a047">_<input id="dob" type="date">
-			<span data-cid="span7_bd3a047">_</span>
+		<input id="count" type="number" data-cid="input5_cbf9ce2">
+		<p data-cid="p6_cbf9ce2">_<input id="dob" type="date">
+			<span data-cid="span7_cbf9ce2">_</span>
 		</p>
-		<button type="submit" data-cid="button8_bd3a047">_</button>
+		<button type="submit" data-cid="button8_cbf9ce2">_</button>
 	</form>
 	<table>
 		<thead>
 			<tr>
-				<th data-cid="th9_bd3a047">_</th>
-				<th data-cid="th10_bd3a047">_</th>
+				<th data-cid="th9_cbf9ce2">_</th>
+				<th data-cid="th10_cbf9ce2">_</th>
 			</tr>
 		</thead>
 		<tbody>
-			<template data-pid="template11_bd3a047"></template>
+			<template data-pid="template11_cbf9ce2"></template>
 		</tbody>
 	</table>
-</template><template data-tid="template11_bd3a047" data-cid="template12_bd3a047">
+</template><template data-tid="template11_cbf9ce2" data-cid="template12_cbf9ce2">
 				<tr>
-					<td data-cid="td13_bd3a047">_</td>
-					<td data-cid="td14_bd3a047">_</td>
+					<td data-cid="td13_cbf9ce2">_</td>
+					<td data-cid="td14_cbf9ce2">_</td>
 				</tr>
 			</template></body>`;
 
@@ -39,13 +39,13 @@ const templates = doc.querySelectorAll('template');
 
 export { doc as document };
 export default templates[0];
-export const template1_bd3a047 = templates[0];
-export const template11_bd3a047 = templates[1];
+export const template1_cbf9ce2 = templates[0];
+export const template11_cbf9ce2 = templates[1];
 
-parsedTemplates.set('template1_bd3a047', template1_bd3a047);
-parsedTemplates.set('template11_bd3a047', template11_bd3a047);
+parsedTemplates.set('template1_cbf9ce2', template1_cbf9ce2);
+parsedTemplates.set('template11_cbf9ce2', template11_cbf9ce2);
 
-contextFunctions.set('p2_bd3a047', function p2_bd3a047() {
+contextFunctions.set('p2_cbf9ce2', function p2_cbf9ce2() {
 	const [host, data, tags] = arguments;
 
 	return {
@@ -53,7 +53,7 @@ contextFunctions.set('p2_bd3a047', function p2_bd3a047() {
 		parts: new Map([[0, (event) => "Expression: " + (host.foo)]])
 	};
 });
-contextFunctions.set('p3_bd3a047', function p3_bd3a047() {
+contextFunctions.set('p3_cbf9ce2', function p3_cbf9ce2() {
 	const [host, data, tags] = arguments;
 
 	return {
@@ -61,7 +61,7 @@ contextFunctions.set('p3_bd3a047', function p3_bd3a047() {
 		parts: new Map([[0, (event) => "Template literal: " + `Foo = ${ host.foo }`]])
 	};
 });
-contextFunctions.set('p4_bd3a047', function p4_bd3a047() {
+contextFunctions.set('p4_cbf9ce2', function p4_cbf9ce2() {
 	const [host, data, tags] = arguments;
 
 	return {
@@ -69,7 +69,7 @@ contextFunctions.set('p4_bd3a047', function p4_bd3a047() {
 		parts: new Map([[0, (event) => "Tagged template literal: " + tags.i18n`localizedText`]])
 	};
 });
-contextFunctions.set('input5_bd3a047', function input5_bd3a047() {
+contextFunctions.set('input5_cbf9ce2', function input5_cbf9ce2() {
 	const [host, data, tags] = arguments;
 
 	return {
@@ -77,7 +77,7 @@ contextFunctions.set('input5_bd3a047', function input5_bd3a047() {
 		parts: new Map([["value", (event) => (host.count)],[".valueAsNumber", (event) => (host.count)]])
 	};
 });
-contextFunctions.set('p6_bd3a047', function p6_bd3a047() {
+contextFunctions.set('p6_cbf9ce2', function p6_cbf9ce2() {
 	const [host, data, tags] = arguments;
 
 	return {
@@ -85,7 +85,7 @@ contextFunctions.set('p6_bd3a047', function p6_bd3a047() {
 		parts: new Map([[0, (event) => "\n\t\t\t" + tags.i18n`dateOfBirth` + ": "]])
 	};
 });
-contextFunctions.set('span7_bd3a047', function span7_bd3a047() {
+contextFunctions.set('span7_cbf9ce2', function span7_cbf9ce2() {
 	const [host, data, tags] = arguments;
 	const dob = (this.previousElementSibling);
 
@@ -95,7 +95,7 @@ contextFunctions.set('span7_bd3a047', function span7_bd3a047() {
 		parts: new Map([[0, (event) => "\n\t\t\t\t(" + tags.i18n`age` + ": " + (host.ageSince(dob.valueAsDate)) + ")\n\t\t\t"]])
 	};
 });
-contextFunctions.set('button8_bd3a047', function button8_bd3a047() {
+contextFunctions.set('button8_cbf9ce2', function button8_cbf9ce2() {
 	const [host, data, tags] = arguments;
 
 	return {
@@ -104,7 +104,7 @@ contextFunctions.set('button8_bd3a047', function button8_bd3a047() {
 		parts: new Map([["class", (event) => "btn " + `btn-${ host.btnType }`],["disabled?", (event) => (host.count > 10)],[0, (event) => "\n\t\t\t" + tags.i18n`submit` + "\n\t\t"]])
 	};
 });
-contextFunctions.set('th9_bd3a047', function th9_bd3a047() {
+contextFunctions.set('th9_cbf9ce2', function th9_cbf9ce2() {
 	const [host, data, tags] = arguments;
 
 	return {
@@ -112,7 +112,7 @@ contextFunctions.set('th9_bd3a047', function th9_bd3a047() {
 		parts: new Map([[0, (event) => tags.i18n`firstName`]])
 	};
 });
-contextFunctions.set('th10_bd3a047', function th10_bd3a047() {
+contextFunctions.set('th10_cbf9ce2', function th10_cbf9ce2() {
 	const [host, data, tags] = arguments;
 
 	return {
@@ -120,7 +120,7 @@ contextFunctions.set('th10_bd3a047', function th10_bd3a047() {
 		parts: new Map([[0, (event) => tags.i18n`lastName`]])
 	};
 });
-contextFunctions.set('template12_bd3a047', function template12_bd3a047() {
+contextFunctions.set('template12_cbf9ce2', function template12_cbf9ce2() {
 	const [host, data, tags] = arguments;
 
 	return {
@@ -129,7 +129,7 @@ contextFunctions.set('template12_bd3a047', function template12_bd3a047() {
 		parts: new Map([["each", (event) => (host.users)]])
 	};
 });
-contextFunctions.set('td13_bd3a047', function td13_bd3a047() {
+contextFunctions.set('td13_cbf9ce2', function td13_cbf9ce2() {
 	const [host, data, tags] = arguments;
 	const { user, i, users } = data;
 
@@ -138,7 +138,7 @@ contextFunctions.set('td13_bd3a047', function td13_bd3a047() {
 		parts: new Map([[0, (event) => (user.firstName)]])
 	};
 });
-contextFunctions.set('td14_bd3a047', function td14_bd3a047() {
+contextFunctions.set('td14_cbf9ce2', function td14_cbf9ce2() {
 	const [host, data, tags] = arguments;
 	const { user, i, users } = data;
 

@@ -21,22 +21,12 @@
   },
   "main": "lib/loader.mjs",
   "scripts": {
+    "lint": "eslint src/*.js",
+    "preversion": "npm run lint && npm run test",
     "test": "jest"
   },
   "jest": {
-    "verbose": true,
-    "testEnvironment": "node",
-    "moduleFileExtensions": [
-      "js",
-      "mjs"
-    ],
-    "testRegex": "test\\/.+\\.test\\.m?js",
-    "transform": {
-      "^.+\\.m?js$": "babel-jest"
-    },
-    "transformIgnorePatterns": [
-      "node_modules/(?!(infuse\\.host)/)"
-    ]
+    "testEnvironment": "node"
   },
   "dependencies": {
     "infuse.host": "github:serg-io/infuse.host",
@@ -47,7 +37,7 @@
     "webpack": "^4.20.2"
   },
   "devDependencies": {
-    "babel-jest": "^23.6.0",
+    "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "eslint": "^5.7.0",
     "eslint-config-airbnb-base": "^13.1.0",
