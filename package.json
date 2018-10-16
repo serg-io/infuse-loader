@@ -19,11 +19,19 @@
   "bugs": {
     "url": "https://github.com/serg-io/infuse-loader/issues"
   },
-  "main": "lib/loader.mjs",
+  "main": "lib/loader.js",
+  "files": [
+    ".babelrc",
+    "/lib",
+    "/src"
+  ],
   "scripts": {
     "lint": "eslint src/*.js",
+    "postversion": "git push && git push --tags",
+    "prepare": "rm -rf lib && npm run transpile",
     "preversion": "npm run lint && npm run test",
-    "test": "jest"
+    "test": "jest",
+    "transpile": "babel src --out-dir lib --ignore *.test.js,__fixtures__"
   },
   "jest": {
     "testEnvironment": "node"

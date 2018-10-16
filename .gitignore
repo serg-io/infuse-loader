@@ -61,4 +61,4 @@ typings/
 .next
 
 # The code is transpiled into the lib directory after the package is installed.
-#lib
+lib
