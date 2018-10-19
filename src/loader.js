@@ -1,4 +1,5 @@
 import utils from 'loader-utils';
+import configs, { setConfigs } from 'infuse.host/lib/configs';
 import createESModule from 'infuse.host/lib/createESModule';
 
 /**
@@ -9,5 +10,17 @@ import createESModule from 'infuse.host/lib/createESModule';
  * @returns {string} The source code of the generated ES module.
  */
 export default function loader(htmlDocument) {
-	return createESModule(htmlDocument, utils.getOptions(this) || {});
+	// Get options for this loader given.
+	const options = utils.getOptions(this) || {};
+	// Find all the keys in `options` that are configuration options.
+	const configKeys = Object.keys(options).filter(key => configs.has(key));
+
+	// Set configurations, if `options` includes configuration options.
+	if (configKeys.length > 0) {
+		// An array of key/value configuration pairs (an array or arrays).
+		const configOptions = configKeys.map(key => ([key, options[key]]));
+		setConfigs(configOptions);
+	}
+
+	return createESModule(htmlDocument, options);
 }

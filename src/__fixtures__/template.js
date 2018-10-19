@@ -1,4 +1,4 @@
-import { contextFunctions, parsedTemplates } from 'infuse.host/src/core';
+import { contextFunctions, parsedTemplates } from 'infuse.host/src/configs';
 
 const html = `<!DOCTYPE html>
 <body><template data-tid="template1_cbf9ce2">
@@ -131,19 +131,17 @@ contextFunctions.set('template12_cbf9ce2', function template12_cbf9ce2() {
 });
 contextFunctions.set('td13_cbf9ce2', function td13_cbf9ce2() {
 	const [host, data, tags] = arguments;
-	const { user, i, users } = data;
 
 	return {
-		constants: { user, i, users, host, data },
+		constants: { host, data },
 		parts: new Map([[0, (event) => (user.firstName)]])
 	};
 });
 contextFunctions.set('td14_cbf9ce2', function td14_cbf9ce2() {
 	const [host, data, tags] = arguments;
-	const { user, i, users } = data;
 
 	return {
-		constants: { user, i, users, host, data },
+		constants: { host, data },
 		parts: new Map([[0, (event) => (user.lastName)]])
 	};
 });
