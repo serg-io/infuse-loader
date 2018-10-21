@@ -46,7 +46,7 @@ parsedTemplates.set('template1_cbf9ce2', template1_cbf9ce2);
 parsedTemplates.set('template11_cbf9ce2', template11_cbf9ce2);
 
 contextFunctions.set('p2_cbf9ce2', function p2_cbf9ce2() {
-	const [host, data, tags] = arguments;
+	const [host, data, iterationData, tags] = arguments;
 
 	return {
 		constants: { host, data },
@@ -54,7 +54,7 @@ contextFunctions.set('p2_cbf9ce2', function p2_cbf9ce2() {
 	};
 });
 contextFunctions.set('p3_cbf9ce2', function p3_cbf9ce2() {
-	const [host, data, tags] = arguments;
+	const [host, data, iterationData, tags] = arguments;
 
 	return {
 		constants: { host, data },
@@ -62,7 +62,7 @@ contextFunctions.set('p3_cbf9ce2', function p3_cbf9ce2() {
 	};
 });
 contextFunctions.set('p4_cbf9ce2', function p4_cbf9ce2() {
-	const [host, data, tags] = arguments;
+	const [host, data, iterationData, tags] = arguments;
 
 	return {
 		constants: { host, data },
@@ -70,7 +70,7 @@ contextFunctions.set('p4_cbf9ce2', function p4_cbf9ce2() {
 	};
 });
 contextFunctions.set('input5_cbf9ce2', function input5_cbf9ce2() {
-	const [host, data, tags] = arguments;
+	const [host, data, iterationData, tags] = arguments;
 
 	return {
 		constants: { host, data },
@@ -78,7 +78,7 @@ contextFunctions.set('input5_cbf9ce2', function input5_cbf9ce2() {
 	};
 });
 contextFunctions.set('p6_cbf9ce2', function p6_cbf9ce2() {
-	const [host, data, tags] = arguments;
+	const [host, data, iterationData, tags] = arguments;
 
 	return {
 		constants: { host, data },
@@ -86,7 +86,7 @@ contextFunctions.set('p6_cbf9ce2', function p6_cbf9ce2() {
 	};
 });
 contextFunctions.set('span7_cbf9ce2', function span7_cbf9ce2() {
-	const [host, data, tags] = arguments;
+	const [host, data, iterationData, tags] = arguments;
 	const dob = (this.previousElementSibling);
 
 	return {
@@ -96,7 +96,7 @@ contextFunctions.set('span7_cbf9ce2', function span7_cbf9ce2() {
 	};
 });
 contextFunctions.set('button8_cbf9ce2', function button8_cbf9ce2() {
-	const [host, data, tags] = arguments;
+	const [host, data, iterationData, tags] = arguments;
 
 	return {
 		constants: { host, data },
@@ -105,7 +105,7 @@ contextFunctions.set('button8_cbf9ce2', function button8_cbf9ce2() {
 	};
 });
 contextFunctions.set('th9_cbf9ce2', function th9_cbf9ce2() {
-	const [host, data, tags] = arguments;
+	const [host, data, iterationData, tags] = arguments;
 
 	return {
 		constants: { host, data },
@@ -113,7 +113,7 @@ contextFunctions.set('th9_cbf9ce2', function th9_cbf9ce2() {
 	};
 });
 contextFunctions.set('th10_cbf9ce2', function th10_cbf9ce2() {
-	const [host, data, tags] = arguments;
+	const [host, data, iterationData, tags] = arguments;
 
 	return {
 		constants: { host, data },
@@ -121,27 +121,29 @@ contextFunctions.set('th10_cbf9ce2', function th10_cbf9ce2() {
 	};
 });
 contextFunctions.set('template12_cbf9ce2', function template12_cbf9ce2() {
-	const [host, data, tags] = arguments;
+	const [host, data, iterationData, tags] = arguments;
 
 	return {
 		constants: { host, data },
-		iterationConstants: {"value":"user","key":"i","collection":"users"},
+		forVariableNames: ["user","i","users"],
 		parts: new Map([["each", (event) => (host.users)]])
 	};
 });
 contextFunctions.set('td13_cbf9ce2', function td13_cbf9ce2() {
-	const [host, data, tags] = arguments;
+	const [host, data, iterationData, tags] = arguments;
+	const { user, i, users } = iterationData || {};
 
 	return {
-		constants: { host, data },
+		constants: { user, i, users, host, data },
 		parts: new Map([[0, (event) => (user.firstName)]])
 	};
 });
 contextFunctions.set('td14_cbf9ce2', function td14_cbf9ce2() {
-	const [host, data, tags] = arguments;
+	const [host, data, iterationData, tags] = arguments;
+	const { user, i, users } = iterationData || {};
 
 	return {
-		constants: { host, data },
+		constants: { user, i, users, host, data },
 		parts: new Map([[0, (event) => (user.lastName)]])
 	};
 });
