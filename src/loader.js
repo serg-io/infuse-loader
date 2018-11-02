@@ -1,6 +1,6 @@
 import utils from 'loader-utils';
-import configs, { setConfigs } from 'infuse.host/lib/configs';
-import createESModule from 'infuse.host/lib/createESModule';
+import configs, { setConfigs } from 'infuse.host/lib/configs.js';
+import createESModule from 'infuse.host/lib/createESModule.js';
 
 /**
  * Parses all template elements in the given HTML document and generates an ES module.
