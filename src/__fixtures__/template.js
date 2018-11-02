@@ -1,4 +1,4 @@
-import { contextFunctions, parsedTemplates } from 'infuse.host/src/configs';
+import { contextFunctions, parsedTemplates } from 'infuse.host/src/configs.js';
 
 const html = `<!DOCTYPE html>
 <body><template data-tid="template1_cbf9ce2">
