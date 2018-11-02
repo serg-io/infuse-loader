@@ -1,6 +1,6 @@
 {
   "name": "infuse-loader",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "",
   "license": "MIT",
   "author": "Sergio Alcantara <iserg9@gmail.com> (https://github.com/serg-io)",
@@ -27,7 +27,7 @@
   ],
   "scripts": {
     "lint": "eslint src/*.js",
-    "postversion": "git push && git push --tags",
+    "postversion": "git push && git push --tags && npm publish",
     "prepare": "rm -rf lib && npm run transpile",
     "preversion": "npm run lint && npm run test",
     "test": "jest",
@@ -37,21 +37,21 @@
     "testEnvironment": "node"
   },
   "dependencies": {
-    "infuse.host": "github:serg-io/infuse.host",
+    "infuse.host": "0.0.1",
     "loader-utils": "^1.1.0"
   },
   "peerDependencies": {
-    "infuse.host": "github:serg-io/infuse.host",
+    "infuse.host": "0.0.1",
     "webpack": "^4.20.2"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
-    "eslint": "^5.7.0",
+    "eslint": "^5.8.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.14.0",
     "jest": "^23.6.0",
     "memory-fs": "^0.4.1",
-    "webpack": "^4.20.2"
+    "webpack": "^4.24.0"
   }
 }
