@@ -1,7 +1,7 @@
 {
   "name": "infuse-loader",
   "version": "0.0.0",
-  "description": "",
+  "description": "Webpack loader for parsing and importing infuse.host templates.",
   "license": "MIT",
   "author": "Sergio Alcantara <iserg9@gmail.com> (https://github.com/serg-io)",
   "homepage": "https://github.com/serg-io/infuse-loader#readme",
