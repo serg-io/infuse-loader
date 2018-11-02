@@ -52,6 +52,7 @@
     "eslint-plugin-import": "^2.14.0",
     "jest": "^23.6.0",
     "memory-fs": "^0.4.1",
+    "merge": "^1.2.1",
     "webpack": "^4.24.0"
   }
 }
