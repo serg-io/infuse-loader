@@ -45,7 +45,7 @@ export const template11_cbf9ce2 = templates[1];
 parsedTemplates.set('template1_cbf9ce2', template1_cbf9ce2);
 parsedTemplates.set('template11_cbf9ce2', template11_cbf9ce2);
 
-contextFunctions.set('p2_cbf9ce2', function p2_cbf9ce2() {
+contextFunctions.set('p2_cbf9ce2', function() {
 	const [host, data, iterationData, tags] = arguments;
 
 	return {
@@ -53,7 +53,7 @@ contextFunctions.set('p2_cbf9ce2', function p2_cbf9ce2() {
 		parts: new Map([[0, (event) => "Expression: " + (host.foo)]])
 	};
 });
-contextFunctions.set('p3_cbf9ce2', function p3_cbf9ce2() {
+contextFunctions.set('p3_cbf9ce2', function() {
 	const [host, data, iterationData, tags] = arguments;
 
 	return {
@@ -61,7 +61,7 @@ contextFunctions.set('p3_cbf9ce2', function p3_cbf9ce2() {
 		parts: new Map([[0, (event) => "Template literal: " + `Foo = ${ host.foo }`]])
 	};
 });
-contextFunctions.set('p4_cbf9ce2', function p4_cbf9ce2() {
+contextFunctions.set('p4_cbf9ce2', function() {
 	const [host, data, iterationData, tags] = arguments;
 
 	return {
@@ -69,7 +69,7 @@ contextFunctions.set('p4_cbf9ce2', function p4_cbf9ce2() {
 		parts: new Map([[0, (event) => "Tagged template literal: " + tags.i18n`localizedText`]])
 	};
 });
-contextFunctions.set('input5_cbf9ce2', function input5_cbf9ce2() {
+contextFunctions.set('input5_cbf9ce2', function() {
 	const [host, data, iterationData, tags] = arguments;
 
 	return {
@@ -77,7 +77,7 @@ contextFunctions.set('input5_cbf9ce2', function input5_cbf9ce2() {
 		parts: new Map([["value", (event) => (host.count)],[".valueAsNumber", (event) => (host.count)]])
 	};
 });
-contextFunctions.set('p6_cbf9ce2', function p6_cbf9ce2() {
+contextFunctions.set('p6_cbf9ce2', function() {
 	const [host, data, iterationData, tags] = arguments;
 
 	return {
@@ -85,7 +85,7 @@ contextFunctions.set('p6_cbf9ce2', function p6_cbf9ce2() {
 		parts: new Map([[0, (event) => "\n\t\t\t" + tags.i18n`dateOfBirth` + ": "]])
 	};
 });
-contextFunctions.set('span7_cbf9ce2', function span7_cbf9ce2() {
+contextFunctions.set('span7_cbf9ce2', function() {
 	const [host, data, iterationData, tags] = arguments;
 	const dob = (this.previousElementSibling);
 
@@ -95,7 +95,7 @@ contextFunctions.set('span7_cbf9ce2', function span7_cbf9ce2() {
 		parts: new Map([[0, (event) => "\n\t\t\t\t(" + tags.i18n`age` + ": " + (host.ageSince(dob.valueAsDate)) + ")\n\t\t\t"]])
 	};
 });
-contextFunctions.set('button8_cbf9ce2', function button8_cbf9ce2() {
+contextFunctions.set('button8_cbf9ce2', function() {
 	const [host, data, iterationData, tags] = arguments;
 
 	return {
@@ -104,7 +104,7 @@ contextFunctions.set('button8_cbf9ce2', function button8_cbf9ce2() {
 		parts: new Map([["class", (event) => "btn " + `btn-${ host.btnType }`],["disabled?", (event) => (host.count > 10)],[0, (event) => "\n\t\t\t" + tags.i18n`submit` + "\n\t\t"]])
 	};
 });
-contextFunctions.set('th9_cbf9ce2', function th9_cbf9ce2() {
+contextFunctions.set('th9_cbf9ce2', function() {
 	const [host, data, iterationData, tags] = arguments;
 
 	return {
@@ -112,7 +112,7 @@ contextFunctions.set('th9_cbf9ce2', function th9_cbf9ce2() {
 		parts: new Map([[0, (event) => tags.i18n`firstName`]])
 	};
 });
-contextFunctions.set('th10_cbf9ce2', function th10_cbf9ce2() {
+contextFunctions.set('th10_cbf9ce2', function() {
 	const [host, data, iterationData, tags] = arguments;
 
 	return {
@@ -120,7 +120,7 @@ contextFunctions.set('th10_cbf9ce2', function th10_cbf9ce2() {
 		parts: new Map([[0, (event) => tags.i18n`lastName`]])
 	};
 });
-contextFunctions.set('template12_cbf9ce2', function template12_cbf9ce2() {
+contextFunctions.set('template12_cbf9ce2', function() {
 	const [host, data, iterationData, tags] = arguments;
 
 	return {
@@ -129,7 +129,7 @@ contextFunctions.set('template12_cbf9ce2', function template12_cbf9ce2() {
 		parts: new Map([["each", (event) => (host.users)]])
 	};
 });
-contextFunctions.set('td13_cbf9ce2', function td13_cbf9ce2() {
+contextFunctions.set('td13_cbf9ce2', function() {
 	const [host, data, iterationData, tags] = arguments;
 	const { user, i, users } = iterationData || {};
 
@@ -138,7 +138,7 @@ contextFunctions.set('td13_cbf9ce2', function td13_cbf9ce2() {
 		parts: new Map([[0, (event) => (user.firstName)]])
 	};
 });
-contextFunctions.set('td14_cbf9ce2', function td14_cbf9ce2() {
+contextFunctions.set('td14_cbf9ce2', function() {
 	const [host, data, iterationData, tags] = arguments;
 	const { user, i, users } = iterationData || {};
 
