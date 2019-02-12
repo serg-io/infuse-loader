@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "description": "Webpack loader for parsing and importing infuse.host templates.",
   "license": "MIT",
-  "author": "Sergio Alcantara <iserg9@gmail.com> (https://github.com/serg-io)",
-  "homepage": "https://github.com/serg-io/infuse-loader#readme",
+  "author": "Sergio Alcantara (https://github.com/serg-io)",
+  "homepage": "https://infuse.host/",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/serg-io/infuse-loader.git"
@@ -13,7 +13,31 @@
     "infuse",
     "HTML",
     "template",
+    "templating",
     "engine",
+    "template engine",
+    "template-engine",
+    "custom elements",
+    "custom-elements",
+    "customized built-in elements",
+    "custom tags",
+    "custom-tags",
+    "web components",
+    "web-components",
+    "shadow dom",
+    "shadow-dom",
+    "data binding",
+    "data-binding",
+    "framework",
+    "frontend",
+    "front-end",
+    "DOM",
+    "SPA",
+    "PWA",
+    "web apps",
+    "web-apps",
+    "web applications",
+    "web-applications",
     "webpack"
   ],
   "bugs": {
@@ -38,7 +62,7 @@
   },
   "dependencies": {
     "infuse.host": "^0.1.0",
-    "loader-utils": "^1.1.0"
+    "loader-utils": "^1.2.3"
   },
   "peerDependencies": {
     "infuse.host": "^0.1.0",
@@ -47,12 +71,12 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
-    "eslint": "^5.9.0",
+    "eslint": "^5.13.0",
     "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.14.0",
-    "jest": "^23.6.0",
+    "eslint-plugin-import": "^2.16.0",
+    "jest": "^24.1.0",
     "memory-fs": "^0.4.1",
     "merge": "^1.2.1",
-    "webpack": "^4.26.1"
+    "webpack": "^4.29.3"
   }
 }
